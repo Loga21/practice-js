@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./delete-func.css">
+  <title>Delete Functionality</title>
+</head>
+
+<body>
+  <table id="table">
+    <th>
+      <tr class="head-container">
+        <td><b>Name</b></td>
+        <td><b>Gender</b></td>
+        <td><b>City</b></td>
+        <td><b>Action</b></td>
+      </tr>
+    </th>
+    <!-- <tb>
+      <tr>
+        <td>Satinder Singh</td>
+        <td>Male</td>
+        <td>Bombay</td>
+        <td><button id="deleteBtn1" class="delete-btn">Delete</button></td>
+      </tr>
+      <tr>
+        <td>Leslie Mac</td>
+        <td>Female</td>
+        <td>Queensland</td>
+        <td><button id="deleteBtn2" class="delete-btn">Delete</button></td>
+      </tr>
+      <tr>
+        <td>Andrea ely</td>
+        <td>Female</td>
+        <td>Rio</td>
+        <td><button id="deleteBtn3" class="delete-btn">Delete</button></td>
+      </tr>
+      <tr>
+        <td>Amit sarna</td>
+        <td>Male</td>
+        <td>Navi Mumbai</td>
+        <td><button id="deleteBtn4" class="delete-btn">Delete</button></td>
+      </tr>
+      <tr>
+        <td>David Miller</td>
+        <td>Male</td>
+        <td>Scouthe</td>
+        <td><button id="deleteBtn5" class="delete-btn">Delete</button></td>
+      </tr>
+    </tb> -->
+  </table>
+
+  <script>
+    
+    const tableData = [
+      {
+        Name: "Satinder Singh",
+        Gender: "Male",
+        City: "Bombay"
+      },
+      {
+        Name: "Leslie Mac",
+        Gender: "Female",
+        City: "Queensland"
+      },
+      {
+        Name: "Andrea ely",
+        Gender: "Female",
+        City: "Rio"
+      },
+      {
+        Name: "Amit sarna",
+        Gender: "Male",
+        City: "Navi Mumbai"
+      },
+      {
+        Name: "David Miller",
+        Gender: "Male",
+        City: "Scouthe"
+      },
+    ];
+
+
+    tableData.map((data) => {
+      // const tb = document.createElement('tb');
+      const tr = document.createElement('tr');
+      const td1 = document.createElement('td');
+      const td2 = document.createElement('td');
+      const td3 = document.createElement('td');
+      const btn = document.createElement('button');
+      btn.innerHTML = 'Delete';
+      btn.setAttribute('id', 'deleteBtn');
+      const table = document.getElementById('table');
+      table.appendChild(tr);
+      // tb.appendChild(tr);
+      tr.appendChild(td1);
+      tr.appendChild(td2);
+      tr.appendChild(td3);
+      tr.appendChild(btn);
+      td1.innerHTML = data.Name;
+      td2.innerHTML = data.Gender;
+      td3.innerHTML = data.City;
+    })
+
+    const deleteBtn = document.querySelectorAll('#deleteBtn');
+    // const deleteBtn2 = document.getElementById('deleteBtn2');
+    // const deleteBtn3 = document.getElementById('deleteBtn3');
+    // const deleteBtn4 = document.getElementById('deleteBtn4');
+    // const deleteBtn5 = document.getElementById('deleteBtn5');
+
+    deleteBtn.forEach((btn) => {
+      btn.addEventListener('click', function (e) {
+        e.target.parentElement.classList.add('transition');
+        setTimeout(() => {
+          e.target.parentElement.remove();
+        }, 1000);
+      })
+      // deleteBtn2.addEventListener('click', function (e) {
+      //   e.target.parentElement.parentElement.remove();
+      // })
+      // deleteBtn3.addEventListener('click', function (e) {
+      //   e.target.parentElement.parentElement.remove();
+      // })
+      // deleteBtn4.addEventListener('click', function (e) {
+      //   e.target.parentElement.parentElement.remove();
+      // })
+      // deleteBtn5.addEventListener('click', function (e) {
+      //   e.target.parentElement.parentElement.remove();
+      // })
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;1,400&family=Ysabeau+Office:ital,wght@0,300;0,400;1,300;1,400;1,500&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Ysabeau Office', sans-serif;
+}
+
+.header {
+    background: linear-gradient(120deg, rgb(66, 86, 152), rgb(81, 130, 158), rgb(139, 214, 247));
+    display: flex;
+    /* background: transparent; */
+    align-items: baseline;
+    padding: 1rem;
+    gap: 2rem;
+    /* color: aliceblue; */
+}
+
+.btn {
+    background: none;
+    border: none;
+    text-decoration: none;
+    color: white;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    padding: 0;
+}
+
+.link {
+    background: none;
+    border: none;
+    text-decoration: none;
+    color: rgb(196, 190, 190);
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    padding: 0;
+}
+
+.dropdown.active>.btn,
+.btn:hover {
+    color: white;
+}
+
+.dropdown.active>.link,
+.link:hover {
+    color: white;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    /* left: 0; */
+    /* top: calc(100% + .25rem); */
+    margin-top: 12px;
+    /* background-color: white; */
+    color: aliceblue;
+    padding: .75rem;
+    border-radius: .25rem;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .4);
+    /* background: rgb(69, 68, 68); */
+    background: transparent;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+}
+
+.dropdown.active>.btn+.dropdown-menu {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.information-grid {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    gap: 2rem;
+}
+
+.dropdown-links {
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+}
+
+.login-form>input {
+    margin-bottom: .5rem;
+}
+
+.login-form>button {
+    background-color: rgb(44, 43, 43);
+    color: aliceblue;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 7px;
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, .1);
+    cursor: pointer;
+}
+
+.login-form>button:hover {
+    background-color: rgb(1, 1, 1);
+}
+
+#tutorialDp1 {
+    display: none;
+    /* display: flex;
+    flex-direction: column;
+    gap: .25rem; */
+}
+
+#tutorialDp1.active {
+    border: 1px solid rgb(220, 217, 217);
+    margin: 5px;
+    gap: .25rem;
+    padding: 15px;
+    position: absolute;
+    display: block;
+    margin-top: 55px;
+    margin-left: 130px;
+    border: none;
+    border-radius: 7px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .4);
+    background: transparent;
+    color: aliceblue;
+    /* cursor: pointer; */
+    width: 70%;
+}
+
+#tutorialDp2 {
+    display: none;
+}
+
+#tutorialDp2.active {
+    border: 1px solid rgb(220, 217, 217);
+    margin: 5px;
+    gap: .25rem;
+    padding: 15px;
+    position: absolute;
+    display: block;
+    margin-top: -17px;
+    margin-left: 114px;
+    border: none;
+    border-radius: 7px;
+    color: aliceblue;
+    /* cursor: pointer; */
+    /* color: black; */
+    background: transparent;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .4);
+    width: 70%;
+}

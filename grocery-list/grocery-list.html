@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./grocery-list.css" />
+    <title>Grocery-List</title>
+</head>
+
+<body>
+    <div class="list-items-wrapper">
+        <div class="title-container">
+            <img src="../assets/images/grocery-list-img.jpg" alt="vegies" width="45" height="45" style="border-radius: 30px;" />
+            <span class="title"><b>Grocery List</b></span>
+        </div>
+        <!-- <form> -->
+        <input type="text" placeholder="List down the items" id="inpValue" />
+        <span><button id="addBtn" onclick="add()">Add</button></span>
+        <div class="list-container">
+            <ul id="list"> </ul>
+        </div>
+        <!-- </form> -->
+    </div>
+
+    <script>
+        // console.log(inputValue);
+        const ul = document.getElementById('list');
+
+        function add() {
+            var inputValue = document.getElementById('inpValue').value;
+            const btn = document.getElementById('addBtn');
+            const ulList = document.getElementById('list');
+            const li = document.createElement('li');
+            // li.setAttribute('class', 'checked');
+            const txt = document.createTextNode(inputValue);
+            const span = document.createElement('span');
+            span.innerHTML = '\u00d7';
+            li.appendChild(txt);
+            li.appendChild(span);
+            // txt.appendChild(span);
+            ulList.appendChild(li);
+            saveData();
+            // ul.innerHTML = '';
+            inputValue = '';
+        }
+
+        ul.addEventListener('click', function (e) {
+            if (e.target.tagName === 'LI') {
+                e.target.classList.toggle('checked');
+                saveData();
+            }
+            else if (e.target.tagName === 'SPAN') {
+                e.target.parentElement.remove();
+                saveData();
+            }
+        });
+
+        const saveData = () => {
+            localStorage.setItem('data', ul.innerHTML);
+        }
+
+        const showList = ()=>{
+            ul.innerHTML = localStorage.getItem('data');
+        }
+
+        showList();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+.container {
+    border: 30px solid black;
+    width: 75%;
+    margin: 68px 150px;
+    display: flex;
+    /* text-align: center; */
+    /* align-items: center; */
+}
+
+.formele-container {
+    /* margin: auto; */
+    /* text-align: center; */
+    margin-left: 50px;
+}
+
+#inpValue{
+    margin: 20px;
+    width: 65%;
+    height: 25px;
+    border: 1px solid black;
+    border-radius: 7px;
+}
+
+.btn{
+    padding: 5px 15px;
+    margin: 8px;
+    background-color: rgb(56, 55, 55);
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.item-container{
+    border: 1px solid rgb(147, 145, 145);
+    border-style: dashed;
+    width: 60%;
+    position: relative;
+    margin-left: 90px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+ul{
+    list-style: none;
+}
+
+.list{
+    padding: 10px;
+    border: 2px solid rgb(194, 191, 191);
+    width: 80%;
+    margin: 10px;
+    margin-left: -13px;
+    border-radius: 6px;
+    text-align: center;
+    /* margin-right: 40px; */
+}
+
+#submitBtn{
+    padding: 5px 15px;
+    margin: 8px;
+    margin-left: 180px;
+    margin-bottom: 30px;
+    background-color: rgb(56, 55, 55);
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.iteration{
+    /* border: 1px solid black; */
+    width: 60%;
+    margin-left: 20px;
+}
+#display-whole{
+    /* border: 1px solid black; */
+    margin-left: 50px;
+    margin-top: 65px;
+    width: 45%;
+    text-align: center;
+}

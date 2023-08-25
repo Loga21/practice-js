@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bg-color.css">
+    <title>Bg color change</title>
+</head>
+
+<body>
+    <video autoplay muted id="vdo-container">
+        <source src="../assets/videos/yt-video-2.mp4" type="video/mp4">
+    </video>
+    <!-- <div> -->
+    <!-- </div> -->
+    <div id="container">
+        <p>Hi, To see a Magic click the button below!</p>
+        <button id="clickBtn" onclick="clickHandler()">Click Me</button>
+        <button id="pauseBtn" onclick="autoplayHandler()"> Pause </button>
+    </div>
+    <script>
+        const btn = document.getElementById('clickBtn');
+        console.log(btn);
+        const wrapper = document.getElementById('container');
+        function clickHandler() {
+            // wrapper.style.backgroundColor = 'lightgreen';
+
+            if (wrapper.style.backgroundColor === 'white') {
+                wrapper.style.backgroundColor = 'lightgreen';
+            }
+            else {
+                wrapper.style.backgroundColor = 'white';
+            }
+
+            // wrapper.classList.toggle("color-change");
+        }
+
+        var vdo = document.getElementById('vdo-container');
+        var pauseBtn = document.getElementById('pauseBtn');
+
+        function autoplayHandler() {
+            if (vdo.paused) {
+                vdo.play();
+                pauseBtn.innerHTML = 'pause';
+            }
+            else {
+                vdo.pause();
+                pauseBtn.innerHTML = 'play';
+            }
+        }
+    </script>
+</body>
+
+</html>

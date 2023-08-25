@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./todo.css" >
+    <title>Todo List</title>
+</head>
+
+<body>
+    <div class="list-container">
+        <ul id="list"></ul>
+        <input type="text" id="inpValue" />
+        <button class="btn" onclick="addItem()">Add</button>
+        <button class="btn" onclick="deleteItem()">Delete</button>
+    </div>
+
+    <script>
+        var ul = document.getElementById('list');
+        var inputValue = document.getElementById('inpValue');
+
+        function addItem() {
+            var li = document.createElement('li');
+            li.setAttribute('id', inputValue.value);
+            li.appendChild(document.createTextNode(inputValue.value));
+            ul.appendChild(li);
+        }
+
+        function deleteItem() {
+          var del = document.getElementById(inputValue.value);
+          ul.removeChild(del); 
+        }
+    </script>
+</body>
+
+</html>

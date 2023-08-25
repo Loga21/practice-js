@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./array-func.css">
+    <title>CRUD Using Array Methods</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="iteration">
+            <div class="formele-container">
+                <input type="text" placeholder="Fruits" id="inpValue" />
+                <div class="btn-container">
+                    <button id="addBtn" class="btn">Add Element</button>
+                    <button id="removeBtn" class="btn">Remove Element</button>
+                    <button id="reallBtn" class="btn">Remove All</button>
+                </div>
+            </div>
+
+            <div class="item-container">
+                <ul id="listContainer">
+                    <!-- <li class="li-item"></li>
+                    <li></li>
+                    <li></li> -->
+                </ul>
+            </div>
+
+            <button id="submitBtn" onclick="handleSubmit()">Submit</button>
+        </div>
+
+        <div id="display-whole">
+            <button id="upperBtn" class="btn" onclick="upper()">UPPER CASE</button>
+            <button id="lowerBtn" class="btn" onclick="lower()">lower case</button>
+            <h3>Your Selected Values</h3>
+            <ul id="listContainer2"></ul>
+        </div>
+    </div>
+
+    <script src="./array-function.js"></script>
+</body>
+
+</html>

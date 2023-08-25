@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./header.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+
+<body>
+  <div class="header">
+    <div class="dropdown" data-dropdown>
+      <button class="btn" data-dropdown-button>Home</button>
+      <div class="dropdown-menu information-grid">
+        <div>
+          <div class="dropdown-heading">Free Tutorials</div>
+          <div class="dropdown-links">
+            <a href="#" class="link">All</a>
+            <a href="#" class="link">Latest</a>
+            <a href="#" class="link">Popular</a>
+          </div>
+        </div>
+        <div>
+          <div class="dropdown-heading">Courses</div>
+          <div class="dropdown-links">
+            <a href="#" class="link">JavaScript</a>
+            <a href="#" class="link">CSS</a>
+            <a href="#" class="link">React</a>
+          </div>
+        </div>
+        <div>
+          <div class="dropdown-heading">Blog</div>
+          <div class="dropdown-links">
+            <a href="#" class="link">All</a>
+            <a href="#" class="link">Latest</a>
+            <a href="#" class="link">Popular</a>
+          </div>
+        </div>
+        <div>
+          <div class="dropdown-heading">Other</div>
+          <div class="dropdown-links">
+            <a href="#" class="link">Twitter</a>
+            <a href="#" class="link">Newsletter</a>
+            <a href="#" class="link">Discord</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="dropdown" data-dropdown>
+      <button class="btn" data-dropdown-button>Web Design</button>
+      <div class="dropdown-menu information-grid">
+        <div>
+          <!-- <div class="dropdown-heading">Free Tutorials</div> -->
+          <div class="dropdown-links">
+            <a href="#" class="link">Project</a>
+            <a href="#" class="link">Videos</a>
+            <button class="link" id="tutorials" data-dropdown-button>Tutorials <i class="fa-solid fa-angle-down"
+                id="turnArrow" style="margin-left: 9px; font-size: 16px; transform: rotate(270deg);"></i>
+            </button>
+
+            <div id="tutorialDp1">
+              <a href="#" class="link">HTML, CSS</a>
+              <a href="#" class="link">JavaScript</a>
+              <button class="link" id="uiTrend">UI Trend <i class="fa-solid fa-angle-down" id="turnArrow"
+                  style="margin-left: 9px; font-size: 16px; transform: rotate(270deg);"></i>
+              </button>
+
+              <div id="tutorialDp2">
+                <a href="#" class="link">Personalization</a>
+                <a href="#" class="link">Scrollytelling</a>
+                <a href="#" class="link">Data Storytelling</a>
+              </div>
+            </div>
+            <!-- </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="dropdown" data-dropdown>
+      <button class="btn" data-dropdown-button>Login</button>
+      <div class="dropdown-menu">
+        <form class="login-form">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email">
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password">
+          <button type="submit">Login</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div>
+    <img src="../assets/images/bg-image.webp" alt="img" width="100%" height="auto" />
+  </div>
+
+  <script src="./header.js" defer></script>
+
+</body>
+
+</html>

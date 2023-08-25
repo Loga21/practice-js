@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+    <script>
+        str = 'Good news! Your identity has been confirmed. Your username is shown below. To change it, go to the Account Dashboard → Account Details after logging in.'
+        const split = str.split(' ')
+        // console.log(split)
+        const slice1 = split.slice(0, 18)
+        // console.log(slice1)
+        const slice2 = split.slice(18, 23)
+        // console.log(slice2)
+        const slice3 = split.slice(23)
+        // console.log(slice3)
+        const val = `${slice1.join(' ')} ${slice2.join(' ')} ${slice3.join(' ')}`
+        console.log(val);
+        // const result = slice1.join(' ') + slice2.join(' ') + slice3.join(' ');
+        // console.log(result)
+    </script>
+</body>
+
+</html>

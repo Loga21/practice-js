@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./counter.css">
+    <title>Counter</title>
+</head>
+
+<body>
+    <div class="text-wrapper">
+        <h2>Counter</h2>
+        <div id="displayValue">0</div>
+        <div class="btn-container">
+            <button id="incBtn" onclick="increment()">Inc</button>
+            <button id="decBtn" onclick="decrement()">Dec</button>
+            <button id="resetBtn" onclick="resetCount()">Reset</button>
+        </div>
+    </div>
+
+    <div class="timer-container">
+        <h2>Timer</h2>
+        <div id="displyTm"></div>
+    </div>
+
+    <script>
+        const display = document.getElementById('displayValue');
+        const inc = document.getElementById('incBtn');
+        const dec = document.getElementById('decBtn');
+        const reset = document.getElementById('resetBtn');
+        var count = 0;
+        function increment() {
+            // const result = display.value + 1;
+            count += 1;
+            display.innerHTML = count;
+        }
+        function decrement() {
+            // const result = display.value + 1;
+            count -= 1;
+            display.innerHTML = count;
+        }
+        function resetCount() {
+            // const result = display.value + 1;
+            count = 0;
+            display.innerHTML = count;
+        }
+
+        var endDate = new Date('oct 1, 2023, 12:12:12').getTime();
+        var timer = document.getElementById('displyTm');
+        console.log(endDate)
+        var result = setInterval(() => {
+            var startDate = new Date().getTime();
+            var diff = endDate - startDate;
+            var days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            timer.innerHTML = `${days}d ${hours}hrs ${minutes}mins ${seconds}secs`
+        }, 1000);
+
+        console.log(new Date())
+        // var lacchu = Math.random()*10;
+        // console.log(lacchu)
+    </script>
+</body>
+
+</html>

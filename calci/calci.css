@@ -1,0 +1,80 @@
+.container{
+    width: 30%;
+    /* height: 200px; */
+    margin: auto;
+}
+
+.title-wrapper{
+    text-align: center;
+    margin: 30px;
+}
+
+.item-container{
+    border: 1px solid black;
+    border-radius: 8px;
+    box-shadow: 2px 6px 9px 0px;
+}
+
+#inpValue{
+    height: 38px;
+    width: 75%;
+    border: 1px solid black;
+    border-radius: 6px;
+}
+
+#clrBtn{
+padding: 8px 15px;
+margin-left: 18px;
+/* border: pink; */
+border: 1px solid black;
+border-radius: 6px;
+background-color: pink;
+/* box-shadow: 1px 3px 8px 1px; */
+cursor: pointer;
+}
+
+.display-wrapper{
+    text-align: center;
+    margin-top: 20px;
+    /* border: 1px solid red; */
+}
+
+.btn-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 15px;
+    /* border: 1px solid red; */
+}
+
+.btn{
+    padding: 10px;
+    border: 1px solid gray;
+    background-color: lightgreen;
+    font-size: large;
+    border-radius: 10px;
+    margin-right: 3px;
+    margin-bottom: 3px;
+    cursor: pointer;
+}
+
+.operator{
+    padding: 10px;
+    border: 1px solid gray;
+    background-color: rgb(222, 244, 178);
+    font-size: large;
+    border-radius: 10px;
+    margin-right: 3px;
+    margin-bottom: 3px;
+    cursor: pointer;
+}
+
+.equals-to{
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    background-color: rgb(236, 208, 122);
+    font-size: large;
+    margin-right: 3px;
+    margin-bottom: 3px;
+    cursor: pointer;
+}

@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau+Office:ital,wght@0,300;0,400;1,300;1,400;1,500&display=swap');
+
+body {
+    background-color: lightblue;
+    font-family: 'Ysabeau Office', sans-serif;
+}
+
+.container {
+    /* position: relative;
+    margin: auto; */
+    /* text-align: center;
+    margin-top: 50px; */
+    background-color: #fff;
+    width: 700px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.15);
+}
+
+.container h2 {
+    font-size: 33px;
+    margin-bottom: 38px;
+    position: relative;
+}
+
+.container h2::after {
+    content: '';
+    width: 78px;
+    height: 4px;
+    border-radius: 4px;
+    background-color: rgb(23, 124, 229);
+    position: absolute;
+    /* text-align: center; */
+    /* align-items: center; */
+    bottom: -10px;
+    left: 45%;
+    /* transform: translateY(-50%); */
+}
+
+#quote-container {
+    font-size: 26px;
+    min-height: 100px;
+}
+
+#quote-container::before,
+#quote-container::after {
+    content: '"';
+}
+
+.container small {
+    /* display: block; */
+    margin-top: 10px;
+    float: right;
+    position: relative;
+}
+
+.container small::before {
+    content: '';
+    width: 15px;
+    height: 2px;
+    border-radius: 4px;
+    background-color: rgb(23, 124, 229);
+    position: absolute;
+    top: 50%;
+    left: -30%;
+}
+
+.container div {
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    /* margin-left: 150px; */
+    justify-content: center;
+}
+
+.container button {
+    background-color: rgb(23, 124, 229);
+    color: #fff;
+    border-radius: 25px;
+    border: 1px solid rgb(205, 211, 218);
+    width: 130px;
+    height: 45px;
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    margin: 5px;
+    cursor: pointer;
+    /* box-shadow: 0px 3px 3px 4px; */
+}

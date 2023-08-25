@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./carousel.css">
+  <title>Carousel</title>
+</head>
+
+<body>
+  <section aria-label="Newest Photos">
+    <div class="carousel" data-carousel>
+      <button class="carousel-button prev" data-carousel-button="prev">&#10092;</button>
+      <button class="carousel-button next" data-carousel-button="next">&#10093;</button>
+      <ul data-slides>
+        <li class="slide" data-active>
+          <img src="https://images.samsung.com/is/image/samsung/assets/us/business/displays/lcd-videowalls/explore/011222/Beautiful-Video-Experience_HD01_HOME-KV-CAROUSEL.jpg?imwidth=1536" alt="restro img #1">
+        </li>
+        <li class="slide">
+          <img src="https://wallpaperaccess.com/full/767283.jpg" alt="restro img #2">
+        </li>
+        <li class="slide">
+          <img src="https://wallpaperaccess.com/full/767255.jpg" alt="restro img #3">
+        </li>
+        <li class="slide">
+          <img src="https://wallpaperaccess.com/full/767252.jpg" alt="restro img #4">
+        </li>
+        <li class="slide">
+          <img src="https://d.line-scdn.net/lcp-prod-photo/20210723_91/1627013823436DFDF6_JPEG/OPD0GWUDSSWRSKRDIGWQMRRF3JP8YF.jpeg" alt="restro img #5">
+        </li>
+        <li class="slide">
+          <img src="https://rare-gallery.com/thumbs/508321-food-luxury.jpg" alt="restro img #6">
+        </li>
+        <li class="slide">
+          <img src="https://images6.alphacoders.com/907/thumb-1920-907101.jpg" alt="restro img #7">
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <script defer>
+    const buttons = document.querySelectorAll("[data-carousel-button]");
+    buttons.forEach(button => {
+      button.addEventListener("click", () => {
+        const offset = button.dataset.carouselButton === "next" ? 1 : -1
+        const slides = button
+          .closest("[data-carousel]")
+          .querySelector("[data-slides]")
+
+        const activeSlide = slides.querySelector("[data-active]");
+        let newIndex = [...slides.children].indexOf(activeSlide) + offset
+        if (newIndex < 0) newIndex = slides.children.length - 1
+        if (newIndex >= slides.children.length) newIndex = 0
+
+        slides.children[newIndex].dataset.active = true
+        delete activeSlide.dataset.active
+      })
+    })
+  </script>
+</body>
+
+</html>

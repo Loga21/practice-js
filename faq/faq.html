@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./faq.css">
+  <title>FAQ</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="faq-wrapper">
+      <div class="question">
+        <p>Where is Taj Mahal located?</p>
+
+      </div>
+      <div class="answer">
+        <p>Taj Mahal is located in Agra, Uttar Pradesh.</p>
+      </div>
+    </div>
+
+    <div class="faq-wrapper">
+      <div class="question">
+        <p>How many planets are there in solar system?</p>
+      </div>
+
+      <div class="answer">
+        <p>
+          There are eight planets in solar system.
+          Mercury, Venus, Earth, Mars, Jupiter, Saturn,
+          Uranus, and Neptune.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // var qus = document.querySelectorAll('.question');
+    // var ans = document.querySelectorAll('.answer');
+    var container = document.querySelectorAll('.faq-wrapper');
+    container.forEach((value) => {
+      value.addEventListener('click', () => {
+        if (value.classList.contains('active')) {
+          value.classList.remove('active');
+        }
+        else {
+          value.classList.add('active');
+        }
+      })
+    })
+  </script>
+</body>
+
+</html>
